@@ -40,7 +40,7 @@ public class EmployeeController {
                 modelEmployee.setFullName(employee.selectFirst("h3").text());
                 modelEmployee.setOrganizationUnit(employee.selectFirst(".item-content").text());
                 modelEmployee.setVcardLink(
-                        "/vcard/" + base64Encode(modelEmployee.getFullName()+"\n"+modelEmployee.getOrganizationUnit())
+                        "https://ppkwu-vcard.herokuapp.com/vcard/" + base64Encode(modelEmployee.getFullName()+"\n"+modelEmployee.getOrganizationUnit())
                 );
 
                 result.add(modelEmployee);
