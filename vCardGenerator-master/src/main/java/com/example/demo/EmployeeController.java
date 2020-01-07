@@ -3,20 +3,18 @@ package com.example.demo;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
-@Controller
-public class ResultsController {
+@RestController
+public class EmployeeController {
 
     private String baseApiUrl = "https://adm.edu.p.lodz.pl/user/users.php?search=";
 
@@ -28,13 +26,13 @@ public class ResultsController {
         }
     }
 
-    @PostMapping("/results")
-    public String searchEmployees(@RequestParam("query") String query, final Model model) {
-
+    @GetMapping("/employees")
+    public List<Employee> searchEmployees(@RequestParam("name") String name) {
+        List<Employee> result = new ArrayList<>();
         try {
-            Document employeesDocument = Jsoup.connect(baseApiUrl + urlEncode(query)).get();
+            Document employeesDocument = Jsoup.connect(baseApiUrl + urlEncode(name)).get();
             Elements employeeList = employeesDocument.select(".user-info");
-            List<Employee> result = new ArrayList<>();
+
 
             employeeList.forEach(employee -> {
                 Employee modelEmployee = new Employee();
@@ -48,13 +46,10 @@ public class ResultsController {
                 result.add(modelEmployee);
             });
 
-            model.addAttribute("employees", result);
-            return "results";
         } catch (Exception e) {
-            model.addAttribute("exceptionType", e.getClass().getName());
-            model.addAttribute("exception", e);
-            return "error";
+            e.printStackTrace();
         }
+        return result;
     }
 
     private String base64Encode(String input) {
