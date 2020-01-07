@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.vcard;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

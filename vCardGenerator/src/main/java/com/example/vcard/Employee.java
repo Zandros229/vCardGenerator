@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.vcard;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

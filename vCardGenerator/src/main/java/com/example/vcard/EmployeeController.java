@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.vcard;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
