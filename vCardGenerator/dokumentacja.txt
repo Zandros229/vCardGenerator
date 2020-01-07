@@ -1,0 +1,126 @@
+po uruchominiu aplikacji wpsujemy w przeglądarkę lub inne zarzędzie do wysyłania http request-ów
+link:
+aplikcaja uruchomiona lokalnie:
+localhost:8080/employees?name=(dane pracaownika)
+aplikacja uruchomina na heroku:
+https://ppkwu-vcard.herokuapp.com/employees?name=(dane pracaownika)
+
+Po czym dostajemy listę pracowników odpowiadającym danym w zapytaniu
+zapytanie:
+https://ppkwu-vcard.herokuapp.com/employees?name=Paweł Kapusta
+odpowiedź:
+ [
+     {
+         "fullName": "Paweł Kapusta",
+         "organizationUnit": "I24 - Instytut Informatyki Stosowanej",
+         "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/UGF3ZcWCIEthcHVzdGEKSTI0IC0gSW5zdHl0dXQgSW5mb3JtYXR5a2kgU3Rvc293YW5lag=="
+     }
+ ]
+zapytanie:
+https://ppkwu-vcard.herokuapp.com/employees?name=Jan
+odpowiedź:
+[
+    {
+        "fullName": "Janusz Adamiec",
+        "organizationUnit": "W10",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFudXN6IEFkYW1pZWMKVzEw"
+    },
+    {
+        "fullName": "Jan Adamus",
+        "organizationUnit": "I19",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEFkYW11cwpJMTk="
+    },
+    {
+        "fullName": "Mirosław Adrjańczyk",
+        "organizationUnit": "AKP - Dział Analizy i Rachuby Płac",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/TWlyb3PFgmF3IEFkcmphxYRjenlrCkFLUCAtIER6aWHFgiBBbmFsaXp5IGkgUmFjaHVieSBQxYJhYw=="
+    },
+    {
+        "fullName": "Małgorzata Adrjańczyk",
+        "organizationUnit": "I26 - Instytut Systemów Inżynierii Elektrycznej",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/TWHFgmdvcnphdGEgQWRyamHFhGN6eWsKSTI2IC0gSW5zdHl0dXQgU3lzdGVtw7N3IEluxbx5bmllcmlpIEVsZWt0cnljem5lag=="
+    },
+    {
+        "fullName": "Jan Andrzejczak",
+        "organizationUnit": "W1 - Wydział Mechaniczny",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEFuZHJ6ZWpjemFrClcxIC0gV3lkemlhxYIgTWVjaGFuaWN6bnk="
+    },
+    {
+        "fullName": "Jan Anuszczyk",
+        "organizationUnit": "I22 - Instytut Elektroenergetyki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEFudXN6Y3p5awpJMjIgLSBJbnN0eXR1dCBFbGVrdHJvZW5lcmdldHlraQ=="
+    },
+    {
+        "fullName": "Jan Awrejcewicz",
+        "organizationUnit": "K11 - Katedra Automatyki, Biomechaniki i Mechatroniki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEF3cmVqY2V3aWN6CksxMSAtIEthdGVkcmEgQXV0b21hdHlraSwgQmlvbWVjaGFuaWtpIGkgTWVjaGF0cm9uaWtp"
+    },
+    {
+        "fullName": "Jan Bitner",
+        "organizationUnit": "I21 - Instytut Automatyki, I23 - Instytut Elektroniki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEJpdG5lcgpJMjEgLSBJbnN0eXR1dCBBdXRvbWF0eWtpLCBJMjMgLSBJbnN0eXR1dCBFbGVrdHJvbmlraQ=="
+    },
+    {
+        "fullName": "Monika Bojanowska",
+        "organizationUnit": "K84 - Katedra Zarządzania Produkcją i Logistyki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/TW9uaWthIEJvamFub3dza2EKSzg0IC0gS2F0ZWRyYSBaYXJ6xIVkemFuaWEgUHJvZHVrY2rEhSBpIExvZ2lzdHlraQ=="
+    },
+    {
+        "fullName": "Monika Bojanowska",
+        "organizationUnit": "I71 - Instytut Fizyki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/TW9uaWthIEJvamFub3dza2EKSTcxIC0gSW5zdHl0dXQgRml6eWtp"
+    },
+    {
+        "fullName": "Janusz Buchta",
+        "organizationUnit": "I22 - Instytut Elektroenergetyki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFudXN6IEJ1Y2h0YQpJMjIgLSBJbnN0eXR1dCBFbGVrdHJvZW5lcmdldHlraQ=="
+    },
+    {
+        "fullName": "Jan Bugajny",
+        "organizationUnit": "I34 - Międzyresortowy Instytut Techniki Radiacyjnej",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEJ1Z2FqbnkKSTM0IC0gTWnEmWR6eXJlc29ydG93eSBJbnN0eXR1dCBUZWNobmlraSBSYWRpYWN5am5lag=="
+    },
+    {
+        "fullName": "Jan Bugajski",
+        "organizationUnit": "AGN - Dział Zarządzania Nieruchomościami",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIEJ1Z2Fqc2tpCkFHTiAtIER6aWHFgiBaYXJ6xIVkemFuaWEgTmllcnVjaG9tb8WbY2lhbWk="
+    },
+    {
+        "fullName": "Ewa Chrześcijańska",
+        "organizationUnit": "I31 - Instytut Chemii Ogólnej i Ekologicznej",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/RXdhIENocnplxZtjaWphxYRza2EKSTMxIC0gSW5zdHl0dXQgQ2hlbWlpIE9nw7NsbmVqIGkgRWtvbG9naWN6bmVq"
+    },
+    {
+        "fullName": "Jan Ciepłucha",
+        "organizationUnit": "PL",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIENpZXDFgnVjaGEKUEw="
+    },
+    {
+        "fullName": "Jan Ciesielski",
+        "organizationUnit": "PL",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIENpZXNpZWxza2kKUEw="
+    },
+    {
+        "fullName": "Jan Ciupa",
+        "organizationUnit": "W5D - Dziekanat",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFuIENpdXBhClc1RCAtIER6aWVrYW5hdA=="
+    },
+    {
+        "fullName": "Janusz Dzirba",
+        "organizationUnit": "I22 - Instytut Elektroenergetyki",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/SmFudXN6IER6aXJiYQpJMjIgLSBJbnN0eXR1dCBFbGVrdHJvZW5lcmdldHlraQ=="
+    },
+    {
+        "fullName": "Anna Fabijańska",
+        "organizationUnit": "I24 - Instytut Informatyki Stosowanej",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/QW5uYSBGYWJpamHFhHNrYQpJMjQgLSBJbnN0eXR1dCBJbmZvcm1hdHlraSBTdG9zb3dhbmVq"
+    },
+    {
+        "fullName": "Wioleta Fabijańska",
+        "organizationUnit": "S2 - Centrum Językowe PŁ",
+        "vcardLink": "https://ppkwu-vcard.herokuapp.com/vcard/V2lvbGV0YSBGYWJpamHFhHNrYQpTMiAtIENlbnRydW0gSsSZenlrb3dlIFDFgQ=="
+    }
+]
+po wejściu w przy odpowiednim pracowniku otrzymamy odpowiedniego vCard z danym pracownikiem którego możemy dodać do naszych kontaktów
+
+Brak logownia!
